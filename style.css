@@ -23,6 +23,7 @@ a {
 	margin: 0 auto;
 	float: none;
 	background-color: #fff;
+	text-align: center; /*Centers all text on the page and images, text-align is inherited so the div with this class will have all of its child elements inherit it*/
 }
 
 div img {
@@ -55,6 +56,23 @@ div img {
 	background-color: #FFFCE6;
 }
 
+.col-3{
+	background-color: aquamarine;
+}
+
+.col-4{
+	background-color: rgba(110, 230, 74, 0.958);
+}
+
+.col-5{
+	background-color: hotpink;
+}
+
+.col-6{
+	background-color: rgb(245, 207, 56);
+}
+
+
 /* Tablet Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
 	
@@ -63,8 +81,16 @@ div img {
 		flex: 0 0 44%;
 	}
   
-  
 
+	.col-5-2{
+		order: -1;
+		background-color: darksalmon;
+	}
+
+	.col-5-1{
+		flex-basis: 44%;
+	}
+	
 
 
 }
@@ -80,6 +106,33 @@ div img {
   
 	.col-2 {
 		flex: 0 0 44%;
+	}
+
+	/*CSS for the 1st column in row 3*/ 
+	.col-3-1{
+		flex-basis: 20%;
+	}
+
+	.col-3-2{
+		flex-basis: 68%;
+	}
+
+	.col-4{
+		flex-basis: 92%;
+	}
+
+	.col-5-1{
+		flex-basis: 20%;
+	}
+
+	.col-5-2{
+		background-color: hotpink;
+		flex-basis: 44%;
+		order: 0; /*Overrides the order value that was specified with the media query for the tablet. Since min-width is the condition, they would both apply to larger screens*/ 
+	}
+
+	.col-6{
+		flex-basis: 15.21%;
 	}
 
 }
